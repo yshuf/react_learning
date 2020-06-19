@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 import AddName from './component/addName/index.js'
-// import Chart from './component/Charts/index.js'
+import Chart from './component/Charts/index.js'
 
 function App () {
     return (

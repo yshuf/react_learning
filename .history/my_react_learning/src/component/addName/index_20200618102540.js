@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react'
 import ProTypes from 'prop-types'
-import { styles } from './index.less'
 
 export default class AddName extends Component {
     // 声明属性
@@ -36,17 +35,19 @@ export default class AddName extends Component {
         const { lastName, lastAge } = this.props;
         return (
             <Fragment>
-                {/* <header className="App-header">
+                <header className="App-header">
                     <h1 className="App-title">Welcome to React</h1>
-                </header> */}
+                </header>
                 <label>{lastName}</label><br />
-                <input className={styles.inputStyle} ref="inputValueTest" /><br />
+                <input ref="inputValueTest" /><br />
                 <button onClick={this.handlerFunc}>confirm</button>
 
                 <label>{lastAge}</label><br />
                 <input ref="inputValueAge" /><br />
                 <button onClick={this.handlerAgeFunc}>confirm</button>
+
                 <button onClick={this.handlerAsyncFunc}>Async confirm</button>
+
             </Fragment>
         )
     }
