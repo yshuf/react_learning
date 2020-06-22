@@ -27,10 +27,7 @@ function App () {
             {/* <AddName></AddName> */}
             {/* <Chart></Chart> */}
             {/* <DataPart></DataPart>*/}
-            {/* <Father></Father> */}
-            {/* <HigherOrderComponent></HigherOrderComponent> */}
-
-            <h3>组件的生命周期</h3>
+            <Father></Father>
         </div>
     );
 }
