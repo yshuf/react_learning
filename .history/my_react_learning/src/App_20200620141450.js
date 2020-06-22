@@ -2,7 +2,7 @@ import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import AddName from './component/addName/index.js'
-// import DataPart from './component/dataPart/dataPart.js'
+import DataPart from './component/dataPart/dataPart.js'
 import Father from './component/communication/Father.js'
 // import Chart from './component/Charts/index.js'
 

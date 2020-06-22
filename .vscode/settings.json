@@ -1,3 +1,10 @@
 {
-    "git.ignoreLimitWarning": true
+	"git.ignoreLimitWarning": true,
+	"emmet.triggerExpansionOnTab": true,
+	"workbench.colorCustomizations": {},
+
+	//react中 tab 键补全 html 标签
+	"emmet.includeLanguages": {
+		"javascript": "javascriptreact"
+	}
 }
