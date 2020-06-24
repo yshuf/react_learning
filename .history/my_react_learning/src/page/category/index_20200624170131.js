@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react'
-import { Route, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 import './index.css'
 class Category extends Component {
     render () {
         return (
             <Fragment>
-                <div className="category-box">
+                <div className="home-box">
                     <ul>
                         <li>
                             <NavLink to='/category/1'>分类一</NavLink>

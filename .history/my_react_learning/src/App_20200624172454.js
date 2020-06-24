@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import AddName from './component/addName/index.js'
@@ -14,34 +14,13 @@ import Category from './page/category/index'
 import ShopCar from './page/shopCar/index'
 import Mine from './page/mine/index'
 import Foot from './component/common/Foot'
-import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
+import { Route, Redirect, Switch } from 'react-router-dom'
 /**
  * @returns
  * react 中没有路由表，只有一个路由工具（组件）叫做 Route
  * 
  */
-class App extends Component {
-    constructor() {
-        super()
-    }
-
-    componentDidMount () {
-        this.redirect()
-    }
-
-    UNSAFE_componentWillReceiveProps () {
-        this.redirect()
-    }
-
-    redirect = () => {
-        let { location, history } = this.props;
-        let pathname = location.pathname
-        if (pathname === '/category') {
-            // 编程式导航 push replace（不会将历史记录存入浏览器） 
-            history.push('/category/1')
-        }
-    }
-
+class App extends React.Component() {
     render (h) {
         return (
             <div className="App" >
@@ -88,4 +67,4 @@ class App extends Component {
 
 }
 
-export default withRouter(App);
+export default App;

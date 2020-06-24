@@ -6,7 +6,7 @@ class Category extends Component {
     render () {
         return (
             <Fragment>
-                <div className="category-box">
+                <div className="home-box">
                     <ul>
                         <li>
                             <NavLink to='/category/1'>分类一</NavLink>

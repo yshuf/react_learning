@@ -2,7 +2,7 @@
     flex: 1;
 }
 
-.category-box ul {
+.ccategory ul {
     display: flex;
     justify-content: space-around;
     font-size: .24rem;

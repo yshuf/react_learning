@@ -21,16 +21,13 @@ import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
  * 
  */
 class App extends Component {
-    constructor() {
-        super()
-    }
 
     componentDidMount () {
         this.redirect()
     }
 
     UNSAFE_componentWillReceiveProps () {
-        this.redirect()
+
     }
 
     redirect = () => {

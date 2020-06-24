@@ -20,29 +20,11 @@ import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
  * react 中没有路由表，只有一个路由工具（组件）叫做 Route
  * 
  */
-class App extends Component {
-    constructor() {
+class App extends Component() {
+    constructor(props) {
         super()
     }
-
-    componentDidMount () {
-        this.redirect()
-    }
-
-    UNSAFE_componentWillReceiveProps () {
-        this.redirect()
-    }
-
-    redirect = () => {
-        let { location, history } = this.props;
-        let pathname = location.pathname
-        if (pathname === '/category') {
-            // 编程式导航 push replace（不会将历史记录存入浏览器） 
-            history.push('/category/1')
-        }
-    }
-
-    render (h) {
+    render () {
         return (
             <div className="App" >
                 {/* <header className="App-header">

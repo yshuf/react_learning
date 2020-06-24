@@ -12,7 +12,7 @@ class Foot extends Component {
                             <NavLink to="/home" activeClassName='active'>首页</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/category/1" activeClassName='active'>分类</NavLink>
+                            <NavLink to="/category" activeClassName='active'>分类</NavLink>
                         </li>
                         <li>
                             <NavLink to="/shopCar" activeClassName='active'>购物车</NavLink>

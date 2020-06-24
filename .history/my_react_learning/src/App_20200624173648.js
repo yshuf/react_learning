@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
 // import AddName from './component/addName/index.js'
@@ -21,27 +21,6 @@ import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
  * 
  */
 class App extends Component {
-    constructor() {
-        super()
-    }
-
-    componentDidMount () {
-        this.redirect()
-    }
-
-    UNSAFE_componentWillReceiveProps () {
-        this.redirect()
-    }
-
-    redirect = () => {
-        let { location, history } = this.props;
-        let pathname = location.pathname
-        if (pathname === '/category') {
-            // 编程式导航 push replace（不会将历史记录存入浏览器） 
-            history.push('/category/1')
-        }
-    }
-
     render (h) {
         return (
             <div className="App" >

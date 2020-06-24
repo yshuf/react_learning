@@ -21,21 +21,20 @@ import { Route, Redirect, Switch, withRouter } from 'react-router-dom'
  * 
  */
 class App extends Component {
-    constructor() {
-        super()
-    }
 
     componentDidMount () {
         this.redirect()
     }
 
     UNSAFE_componentWillReceiveProps () {
+        console.log(this)
         this.redirect()
     }
 
     redirect = () => {
         let { location, history } = this.props;
         let pathname = location.pathname
+        console.log(pathname)
         if (pathname === '/category') {
             // 编程式导航 push replace（不会将历史记录存入浏览器） 
             history.push('/category/1')
