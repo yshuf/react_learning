@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 class Foot extends Component {
@@ -15,15 +15,7 @@ class Foot extends Component {
                             <NavLink to="/category" activeClassName='active'>分类</NavLink>
                         </li>
                         <li>
-                            <NavLink to={
-                                {
-                                    pathname: '/shopCar/001',
-                                    search: '?a=1&b=2',
-                                    state: {
-                                        money: 1000
-                                    }
-                                }
-                            } activeClassName='active'>购物车</NavLink>
+                            <NavLink to="/shopCar" activeClassName='active'>购物车</NavLink>
                         </li>
                         <li>
                             <NavLink to="/mine" activeClassName='active'>我的</NavLink>

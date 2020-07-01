@@ -2,8 +2,7 @@ import React, { Component, Fragment } from 'react'
 
 import './index.css'
 
-// node.js之querystring模块，一般对http请求所带的数据进行解析
-// querystring.parse() 将一个字符串反序列化为一个对象
+// node.js之querystring模块
 const qs = require('querystring')
 class ShopCar extends Component {
     // constructor(props) {

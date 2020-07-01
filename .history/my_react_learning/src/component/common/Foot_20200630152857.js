@@ -17,11 +17,7 @@ class Foot extends Component {
                         <li>
                             <NavLink to={
                                 {
-                                    pathname: '/shopCar/001',
-                                    search: '?a=1&b=2',
-                                    state: {
-                                        money: 1000
-                                    }
+                                    pathname: '/shopCar/001'
                                 }
                             } activeClassName='active'>购物车</NavLink>
                         </li>

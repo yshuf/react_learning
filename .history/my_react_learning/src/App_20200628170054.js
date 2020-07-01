@@ -77,7 +77,7 @@ class App extends Component {
                     <Redirect from='/' to='/home' exact></Redirect>
                     <Route path='/home' component={Home} ></Route>
                     <Route path='/category' component={Category} ></Route>
-                    <Route path='/shopCar/:id' component={ShopCar} ></Route>
+                    <Route path='/shopCar' component={ShopCar} ></Route>
                     <Route path='/mine' component={Mine} ></Route>
                 </Switch >
                 <Foot></Foot>
