@@ -13,8 +13,7 @@ class Home extends Component {
         // 全屏事件
         let element = document.documentElement;
         if (this.fullscreen) {
-            // 退出全屏
-            console.log(document.exitFullscreen)
+            console.log(123)
             if (document.exitFullscreen) {
                 document.exitFullscreen();
             } else if (document.webkitCancelFullScreen) {
@@ -25,7 +24,6 @@ class Home extends Component {
                 document.msExitFullscreen();
             }
         } else {
-            // console.log(13, element.requestFullscreen())
             // 全屏
             if (element.requestFullscreen) {
                 // W3C
@@ -46,7 +44,7 @@ class Home extends Component {
         return (
             <Fragment>
                 <div className="home-box"> home</div>
-                <button onClick={() => { this.handleFullScreen() }}>fullScreen</button>
+                <button onClick={() => { this.handleFullScreen() }}>全屏</button>
             </Fragment>
         )
     }

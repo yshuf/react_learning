@@ -29,6 +29,7 @@ class Home extends Component {
             // 全屏
             if (element.requestFullscreen) {
                 // W3C
+                console.log(98)
                 element.requestFullscreen();
             } else if (element.webkitRequestFullScreen) {
                 // Chrome

@@ -2,19 +2,10 @@ import React, { Component, Fragment } from 'react'
 
 import './index.css'
 class Home extends Component {
-    constructor(props) {
-        super(props)
-        this.fullscreen = false
-    }
 
     handleFullScreen = () => {
-        //定义一个变量进行判断，默认false 非全屏状态
-        let exitFullscreen = false
-        // 全屏事件
         let element = document.documentElement;
         if (this.fullscreen) {
-            // 退出全屏
-            console.log(document.exitFullscreen)
             if (document.exitFullscreen) {
                 document.exitFullscreen();
             } else if (document.webkitCancelFullScreen) {
@@ -25,28 +16,27 @@ class Home extends Component {
                 document.msExitFullscreen();
             }
         } else {
-            // console.log(13, element.requestFullscreen())
-            // 全屏
             if (element.requestFullscreen) {
-                // W3C
                 element.requestFullscreen();
             } else if (element.webkitRequestFullScreen) {
-                // Chrome
                 element.webkitRequestFullScreen();
             } else if (element.mozRequestFullScreen) {
-                // FireFox
                 element.mozRequestFullScreen();
             } else if (element.msRequestFullscreen) {
                 // IE11
                 element.msRequestFullscreen();
             }
         }
+
+        ————————————————
+        版权声明：本文为CSDN博主「@Grapefruit」的原创文章，遵循CC 4.0 BY - SA版权协议，转载请附上原文出处链接及本声明。
+        原文链接：https://blog.csdn.net/qq_43052274/article/details/91427479
     }
     render () {
         return (
             <Fragment>
                 <div className="home-box"> home</div>
-                <button onClick={() => { this.handleFullScreen() }}>fullScreen</button>
+                <button onClick={() => { this.handleFullScreen() }}>全屏</button>
             </Fragment>
         )
     }

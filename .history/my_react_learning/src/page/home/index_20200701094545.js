@@ -25,10 +25,11 @@ class Home extends Component {
                 document.msExitFullscreen();
             }
         } else {
-            // console.log(13, element.requestFullscreen())
+            console.log(13, element.requestFullscreen())
             // 全屏
             if (element.requestFullscreen) {
                 // W3C
+                console.log(98)
                 element.requestFullscreen();
             } else if (element.webkitRequestFullScreen) {
                 // Chrome
