@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react'
 import './index.css'
 
-import { Route, Switch, Redirect, NavLink } from 'react-router-dom'
+import { Route, Switch, Redirect } from 'react-router-dom'
 import Home from '../../page/home/home'
 import Category from '../../page/category/index'
 import Mine from '../../page/mine/index'
@@ -19,18 +19,17 @@ export default class LayOut extends Component {
 
                 <div>
                     {/* 路由导航区域 */}
-                    <nav className="nav nav-pills nav-fill">
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/home">home</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/mine">mine</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/category">category</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/shopCar">shopCar</NavLink>
+                    <nav className="nav">
+                        <a className="nav-link active" href="#">Active</a>
+                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link" href="#">Link</a>
+                        <a className="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </nav>
                 </div>
 
                 <div>
                     {/* 路由展示区域 */}
                     <Switch>
-                        {/* 重定向 别忘记添加 exact*/}
                         <Redirect from='/' to='/home' exact></Redirect>
                         <Route path='/home' component={Home} />
                         <Route path='/category' component={Category} />

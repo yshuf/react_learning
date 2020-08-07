@@ -30,7 +30,7 @@ export default class LayOut extends Component {
                 <div>
                     {/* 路由展示区域 */}
                     <Switch>
-                        {/* 重定向 别忘记添加 exact*/}
+                        {/* 重定向 */}
                         <Redirect from='/' to='/home' exact></Redirect>
                         <Route path='/home' component={Home} />
                         <Route path='/category' component={Category} />

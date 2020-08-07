@@ -19,18 +19,17 @@ export default class LayOut extends Component {
 
                 <div>
                     {/* 路由导航区域 */}
-                    <nav className="nav nav-pills nav-fill">
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/home">home</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/mine">mine</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/category">category</NavLink>
-                        <NavLink className="nav-item nav-link" activeClassName='active' to="/shopCar">shopCar</NavLink>
+                    <nav className="nav">
+                        <NavLink className="nav-link active" to="/home">home</NavLink>
+                        <NavLink className="nav-link" to="/mine">mine</NavLink>
+                        <NavLink className="nav-link" to="/category">category</NavLink>
+                        <NavLink className="nav-link" to="/shopCar">shopCar</NavLink>
                     </nav>
                 </div>
 
                 <div>
                     {/* 路由展示区域 */}
                     <Switch>
-                        {/* 重定向 别忘记添加 exact*/}
                         <Redirect from='/' to='/home' exact></Redirect>
                         <Route path='/home' component={Home} />
                         <Route path='/category' component={Category} />
