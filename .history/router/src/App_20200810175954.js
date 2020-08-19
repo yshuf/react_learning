@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import logo from './logo.svg';
 import './App.css';
 import LayOut from '../src/component/LayOut/index'
 
@@ -8,11 +8,8 @@ import { withRouter } from 'react-router-dom'
 class App extends Component() {
     constructor() {
         super()
-        this.State = {
-
-        }
     }
-    render (h) {
+    render () {
         return (
             <div className="App" >
                 {/* <header className="App-header">

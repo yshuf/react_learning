@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom'
 
 class App extends Component() {
     constructor() {
-        super()
+        // super()
         this.State = {
 
         }

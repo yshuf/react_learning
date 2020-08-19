@@ -8,9 +8,6 @@ import { withRouter } from 'react-router-dom'
 class App extends Component() {
     constructor() {
         super()
-        this.State = {
-
-        }
     }
     render (h) {
         return (

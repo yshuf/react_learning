@@ -1,18 +1,12 @@
-import React, { Component } from 'react';
-// import logo from './logo.svg';
+import React from 'react';
+import logo from './logo.svg';
 import './App.css';
 import LayOut from '../src/component/LayOut/index'
 
 import { withRouter } from 'react-router-dom'
 
-class App extends Component() {
-    constructor() {
-        super()
-        this.State = {
-
-        }
-    }
-    render (h) {
+class App extends React.Component() {
+    render () {
         return (
             <div className="App" >
                 {/* <header className="App-header">
@@ -30,7 +24,7 @@ class App extends Component() {
             </a>
           </header> */}
 
-                <LayOut></LayOut>
+                <LayOut LayOut ></LayOut>
             </div >
         );
     }

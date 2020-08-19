@@ -6,8 +6,8 @@ import LayOut from '../src/component/LayOut/index'
 import { withRouter } from 'react-router-dom'
 
 class App extends Component() {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.State = {
 
         }
