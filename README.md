@@ -118,36 +118,37 @@ const Hoc = (Comp) => {
 ### 初始化
 
     在组件初始化阶段会执行
+
 1. constructor
-        // 通过super来继承父类身上传递过过来的属性,然后当前组件通过this.props接收
-        // 用来初始化一个状态 this.state={}
-        // 用来初始绑定一个方法，将this传递给这个方法，一些this方法的绑定 this.XXXX.bind(this) 不写订阅（订阅：事件的触发）
-2.  static getDerivedStateFormProps()  ---将来可能会使用
-3.  componentWillMount/ UNSAFE_componentWillMount()  带有UNSAFE属于过时的钩子函数
-        //  提供一次 数据修改机会
-        // 进行数据请求
-            axios
-            fetch
-4.  render()  // 将Jsx转换成虚拟DOM的对象
-5.  componentDidMount() // 组件挂载（将render函数生成的vdom对象渲染成真实dom，然后挂载在id为root的容器中）结束
+   // 通过 super 来继承父类身上传递过过来的属性,然后当前组件通过 this.props 接收
+   // 用来初始化一个状态 this.state={}
+   // 用来初始绑定一个方法，将 this 传递给这个方法，一些 this 方法的绑定 this.XXXX.bind(this) 不写订阅（订阅：事件的触发）
+2. static getDerivedStateFormProps() ---将来可能会使用
+3. componentWillMount/ UNSAFE_componentWillMount() 带有 UNSAFE 属于过时的钩子函数
+   // 提供一次 数据修改机会
+   // 进行数据请求
+   axios
+   fetch
+4. render() // 将 Jsx 转换成虚拟 DOM 的对象
+5. componentDidMount() // 组件挂载（将 render 函数生成的 vdom 对象渲染成真实 dom，然后挂载在 id 为 root 的容器中）结束
 
 ### 更新阶段
 
     props或state的改变可能会引起组件的更新，组件重新渲染的过程中会调用以下方法：
+
 1.  componentWillReceiveProps(nextProps)
-        // 触发：属性发生改变，就会触发
-        // 这个钩子函数一定能监听到整个当前组件的属性变化---->当前组件的路由我们也可以监听到
-        应用场景：
-            1.路由监听
+    // 触发：属性发生改变，就会触发
+    // 这个钩子函数一定能监听到整个当前组件的属性变化---->当前组件的路由我们也可以监听到
+    应用场景： 1.路由监听
 2.  static getDerivedStateFormProps()
-3.  shouldComponentUpdate()  // 状态改变  决定组件是否更新 return false/true(默认值为true)，React 性能优化的关键钩子
-4.  componentWillUpdate(nextProps,nextState)  // 生成虚拟dom，通过算法，比较生成配置对象,不能再这里使用this.setState,组件即将更新，生成新的VDOM
-5.  render()   // jsx--->vdom对象
+3.  shouldComponentUpdate() // 状态改变 决定组件是否更新 return false/true(默认值为 true)，React 性能优化的关键钩子
+4.  componentWillUpdate(nextProps,nextState) // 生成虚拟 dom，通过算法，比较生成配置对象,不能再这里使用 this.setState,组件即将更新，生成新的 VDOM
+5.  render() // jsx--->vdom 对象
 6.  getSnapshotBeforeUpdate() ---将来可能会使用
-7.  componentDidUpdate(preState,preProps,snapshot)  // 新旧虚拟dom对比，不一样的地方做渲染，更新视图(第三方实例化）
-        组件更新结束：在这里可以进行数据请求，DOM操作，接收getSnapshotBeforeUpdate() 第三个参数作为返回值
-        使用fiber算法进行，新 vdom 和旧的vdom对比，生成新的patch对象，再根据patch对象进行页面渲染
-        不能再这里写setState，否则会造成死循环
+7.  componentDidUpdate(preState,preProps,snapshot) // 新旧虚拟 dom 对比，不一样的地方做渲染，更新视图(第三方实例化）
+    组件更新结束：在这里可以进行数据请求，DOM 操作，接收 getSnapshotBeforeUpdate() 第三个参数作为返回值
+    使用 fiber 算法进行，新 vdom 和旧的 vdom 对比，生成新的 patch 对象，再根据 patch 对象进行页面渲染
+    不能再这里写 setState，否则会造成死循环
 
 ### 卸载阶段
 
@@ -234,26 +235,26 @@ export default HookComponent
     ```
 
 3.  Route 上面的属性
-4.  创建路由链接：NavLink 路由激活 不需要激活Link
+4.  创建路由链接：NavLink 路由激活 不需要激活 Link
     props：to-跳转链接的路径
 5.  exact 路径完全匹配 必须是一致的 / /home
 6.  重定向组件 redirect
 7.  路由，路由组件可以通过 componentWillReceiveProps 来监听路由变化
+
     ```javascript
-    
     ```
+
 8.  App 组件不是路由组件，不能监听路由的变化，使用非常规手段将 App 组件变成路由组件
     -   使用高阶组件 withRouter
 9.  Switch 组件（一次只渲染一个），只显示首个匹配的路由
-10. Redirect 组件 
+10. Redirect 组件
     props：form-想由那个路径进行重定向，to-目标重定向的路径
 
+## node.js 之 querystring 模块，一般对 http 请求所带的数据进行解析
 
-
-
-##  node.js之querystring模块，一般对http请求所带的数据进行解析
     querystring.parse() 将一个字符串反序列化为一个对象
     const qs = require('querystring')
+
 ## redux 使用
 
 1. 通过 npm 安装 redux

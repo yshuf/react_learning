@@ -5,12 +5,12 @@ import LayOut from '../src/component/LayOut/index'
 
 import { withRouter } from 'react-router-dom'
 
-class App extends Component() {
-    constructor() {
-        super()
-        this.State = {
+class App extends Component {
+    constructor(props) {
+        super(props)
+        // this.state = {
 
-        }
+        // }
     }
     render (h) {
         return (
